@@ -35,7 +35,7 @@ namespace AutoClicker
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            
+
             if (isClickerRunning)
             {
                 PerformClicks(point1);
@@ -69,8 +69,8 @@ namespace AutoClicker
 
         private void button2_Click(object sender, EventArgs e)
         {
-            isClickerRunning = false;
-            timer1.Stop();
+            Form1 form = new Form1();
+            form.ShowDialog();
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -105,6 +105,10 @@ namespace AutoClicker
             form1.ShowDialog();
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
-
